@@ -49,6 +49,39 @@ nav a:focus-visible {
   color: var(--white);
 }
 
+/* Center the typewriter effect container */
+.typewriter {
+  display: flex;
+  justify-content: center;
+}
+
+/* Styling for the typewriter text */
+.typewriter > h1 {
+  font-size: 4rem;
+  margin-inline: auto; /* Centers the element horizontally */
+  overflow: hidden; /* Hides the overflowing text during animation */
+  white-space: nowrap; /* Keeps the text on one line */
+  border-right: 1px white solid; /* The typing cursor */
+  animation: typing 0.8s steps(9) forwards, blink 1s step-end infinite; /* Uses the typing and blink animations */
+}
+
+/* Keyframes for the typing effect */
+@keyframes typing {
+  from {
+    width: 0; /* Starts with no visible text */
+  }
+  to {
+    width: 100%; /* Expands the width to reveal the text */
+  }
+}
+
+/* Keyframes for the blinking cursor effect */
+@keyframes blink {
+  50% {
+    border-color: transparent; /* Hides the cursor at 50% of the animation cycle */
+  }
+}
+
 /* General section styling */
 section {
   height: 100vh;
@@ -56,11 +89,6 @@ section {
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-}
-
-/* Styling for section titles */
-section > h1 {
-  font-size: 4rem;
 }
 
 /* Button styling for sections */
