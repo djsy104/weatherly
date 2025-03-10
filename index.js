@@ -2,10 +2,13 @@
 async function getWeatherData(param) {
   try {
     const response = await fetch(apiUrl);
+
+    // If the response is not ok, throws an error
     if (!response.ok) {
       throw new Error("Failed to fetch data.");
     }
 
+    // Parse the response as JSON
     const data = await response.json();
 
     // Returns the specified weather parameter from the current weather data
@@ -27,7 +30,7 @@ async function updateWeatherData(type, textElementId) {
   }
 
   textElement.textContent = "Loading. . ."; // Temporary text while fetching data
-  const weatherData = await getWeatherData(type);
+  const weatherData = await getWeatherData(type); // Fetches the weather data based on specified type
 
   // Checks if the weather data is valid (not null or undefined
   if (weatherData !== null && weatherData !== undefined) {

@@ -2,6 +2,7 @@
   --white: #fefcfd;
 }
 
+/* General HTML styling */
 html {
   font-family: "Funnel Display", sans-serif;
   background-color: #000505;
@@ -9,38 +10,46 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Body styling */
 body {
   height: 100vh;
-  margin: 0;
+  margin: 0; /* Removes default margin */
 }
 
+/* Navigation bar styling */
 nav {
   position: fixed;
-  inset: 2rem 3rem auto;
+  inset: 2rem 3rem auto; /* Adjust position with space from top, right, and bottom */
   padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 50%;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 50%; /* Position it at the center horizontally */
+  transform: translateX(
+    -50%
+  ); /* Offset by half of its width to perfectly center */
   gap: 2.5vw;
   background-color: #0005057f;
   border-radius: 0.5rem;
 }
 
+/* Styling for nav links */
 nav > a {
   font-size: 1rem;
   font-weight: 500;
   color: #d3d3d3;
   text-decoration: none;
-  transition: color 0.3 ease;
+  transition: color 0.3 ease; /* Smooth color transition on hover/focus */
 }
 
+/* Hover/Focus styling for nav links*/
 nav a:hover,
 nav a:focus-visible {
   color: var(--white);
 }
+
+/* General section styling */
 section {
   height: 100vh;
   display: flex;
@@ -49,10 +58,12 @@ section {
   align-items: center;
 }
 
+/* Styling for section titles */
 section > h1 {
   font-size: 4rem;
 }
 
+/* Button styling for sections */
 section > .button {
   background-color: #000000;
   font-family: inherit;
@@ -63,11 +74,13 @@ section > .button {
   border-radius: 0.4rem;
 }
 
+/* Hover effect for buttons */
 section > .button:hover {
   background-color: rgba(0, 0, 0, 0.596);
   cursor: pointer;
 }
 
+/* Card styling for each data section */
 .card {
   display: flex;
   flex-flow: column wrap;
@@ -80,12 +93,14 @@ section > .button:hover {
   border-radius: 0.5rem;
 }
 
+/* Image styling inside cards*/
 .card > img {
   padding-top: 2rem;
   height: 4rem;
   object-fit: contain;
 }
 
+/* Specific section backgrounds */
 #temperature-section {
   background-color: #303058;
 }
