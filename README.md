@@ -28,7 +28,3 @@ To update the weather data displayed on any section:
 2. The page will fetch the latest data from the weather API and display the updated information in the respective section.
 
 Each section is updated independently, so you can refresh any data without affecting other sections.
-
----
-
-Feel free to navigate through the sections and check out the current weather data for Long Beach.
